@@ -35,6 +35,7 @@ utenti="CREATE TABLE utenti(
 documenti="CREATE TABLE documenti(
                                     numero serial,
                                     id varchar(15) UNIQUE NOT NULL,
+				    nome_file varchar(50) NOT NULL,
                                     documento JSON NOT NULL,
                                     token INT NOT NULL,
                                     ragionesociale varchar(30) REFERENCES azienda(ragionesociale),

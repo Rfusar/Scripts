@@ -1,0 +1,4 @@
+ricordati di inserire in home/Scrivania i file => Dockerfile e .env e inizializzazione.sh
+
+nel caso non fosse installato POSTREGSQL ===> sudo docker pull postgres
+installare immagine ===> sudo docker pull rfusaro12276/web_page

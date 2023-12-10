@@ -7,7 +7,7 @@ nel caso non fosse installato POSTREGSQL ===> sudo docker pull postgres
 	
 	creazione immagine PSQL ===> sudo docker run -d -e POSTGRES_PASSWORD=password -p 5432:5432 --name psql  postgres:latest
 	
-	se volessi accedere al DB ===> sudo docker exec it <Custom_nome_immagine> psql -U postgres
+	se volessi accedere al DB ===> sudo docker exec it psql psql -U postgres
 
 
 installare immagine ===> sudo docker pull rfusaro12276/web_page

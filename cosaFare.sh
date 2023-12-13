@@ -8,6 +8,10 @@ while $var; do
     echo "--up: accendi WEB_PAGE"
     echo "--down: spegni WEB_PAGE "
     echo ""
+    echo "--status: status immagini e containers"
+    echo "--init: inizializza il container"
+    echo ""
+    echo ""
     echo ""
     read -p "cosa devi fare?" ris
     
@@ -22,9 +26,9 @@ while $var; do
 	while $update; do
 	    clear 
 	    read -p "Vuoi fare altro? [Y/N]" update_ris
-	        if "$update_ris" = "Y"; then
+	        if [ "$update_ris" = "Y" ]; then
 			update=false
-	        elif "$update_ris" = "N"; then
+	        elif [ "$update_ris" = "N" ]; then
 			update=false
 			var=false
 		fi
@@ -45,7 +49,22 @@ while $var; do
     elif [ "$ris" = "down" ]; then
 	clear
 	./comandi/web_page___down.sh	
+
+    elif [ "$ris" = "status" ]; then
+	clear
+	echo "Questi sono i containers attivi"
+	sudo docker ps 
+	echo ""
+	echo "Questi sono i containers"
+	sudo docker ps -a
+	echo ""
+	echo "Queste sono l'immagini"
+	sudo docker images
+	read
     
+    elif [ "$ris" = "init" ]; then
+	./comandi/web_page___init.sh
+
     elif [ "$ris" = "esci" ]; then
 	clear
         var=false

@@ -1,5 +1,5 @@
 #NEL CASO VOLESSI CREARE L'IMMAGINE
-#ricordati di inserire in home/Scrivania i file => Dockerfile e .env e inizializzazione.sh
+#ricordati di esportare in home/Scrivania i file => Dockerfile e .env e inizializzazione.sh (sono all'interno della cartella => creazione_immagine)
 
 
 nel caso non fosse installato POSTREGSQL ===> sudo docker pull postgres
